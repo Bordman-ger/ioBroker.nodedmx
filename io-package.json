@@ -1,0 +1,79 @@
+{
+	"common": {
+		"name": "nodedmx",
+		"version": "0.0.2",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "NodeDmx",
+		"titleLang": {
+			"en": "NodeDmx",
+			"de": "NodeDmx",
+			"ru": "NodeDmx",
+			"pt": "NodeDmx",
+			"nl": "NodeDmx",
+			"fr": "NodeDmx",
+			"it": "NodeDmx",
+			"es": "NodeDmx",
+			"pl": "NodeDmx",
+			"zh-cn": "诺诺DMX"
+		},
+		"desc": {
+			"en": "nodedmx",
+			"de": "nodedmx",
+			"ru": "nodedmx",
+			"pt": "nodedmx",
+			"nl": "nodedmx",
+			"fr": "nodedmx",
+			"it": "nodedmx",
+			"es": "nodedmx",
+			"pl": "nodedmx",
+			"zh-cn": "纳米DMX"
+		},
+		"authors": [
+			"Boardman-ger <Boardman-ger@selzer-schoeneck.de>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "nodedmx.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/Boardman-ger/ioBroker.nodedmx/master/admin/nodedmx.png",
+		"readme": "https://github.com/Boardman-ger/ioBroker.nodedmx/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "lighting",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"Device": "/dev/ttyACM0", 
+		"Test": "4210"
+	},
+	"objects": [],
+	"instanceObjects": []
+}

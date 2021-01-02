@@ -1,0 +1,33 @@
+{
+	"cli": true,
+	"adapterName": "nodedmx",
+	"title": "NodeDMX",
+	"description": "NodeDmx",
+	"expert": "no",
+	"features": [
+		"adapter"
+	],
+	"adminFeatures": [],
+	"type": "lighting",
+	"startMode": "daemon",
+	"connectionType": "local",
+	"dataSource": "poll",
+	"connectionIndicator": "no",
+	"language": "TypeScript",
+	"adminReact": "no",
+	"tools": [
+		"ESLint"
+	],
+	"indentation": "Tab",
+	"quotes": "double",
+	"es6class": "yes",
+	"authorName": "Boardman-ger",
+	"authorGithub": "Boardman-ger",
+	"authorEmail": "Boardman-ger@selzer-schoeneck.de",
+	"gitRemoteProtocol": "HTTPS",
+	"gitCommit": "no",
+	"license": "MIT License",
+	"ci": "gh-actions",
+	"dependabot": "no",
+	"creatorVersion": "1.29.1"
+}
