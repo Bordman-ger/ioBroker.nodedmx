@@ -14,7 +14,7 @@
 
 ## nodedmx adapter for ioBroker
 
-nodedmx adpter is used to have acces to node-dmx/dmx modules for accessing varios DMX devises as explained here: 
+nodedmx adpter is used to have acces to node-dmx/dmx modules for accessing varios DMX devices as explained here: 
 
 https://github.com/node-dmx/dmx
 
@@ -29,7 +29,7 @@ Actually this devices are supported:
     enttec-open-usb-dmx: driver for "Enttec Open DMX USB". This device is NOT recommended, there are known hardware limitations and this driver is not very stable. (If possible better obtain a device with the "pro" chip)
     dmxking-utra-dmx-pro: driver for the DMXKing Ultra DMX pro interface. This driver support multiple universe specify the options with Port = A or B
 
-I have only tested the dmx4all device together with a nonoDMX Controler.
+I have only tested the dmx4all device together with a nanoDMX Controler.
 
 
 
