@@ -1,49 +1,22 @@
-![Logo](admin/node-dmx.png)
-# ioBroker.node-dmx
+![Logo](admin/nodedmx.png)
+# ioBroker.nodedmx
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.node-dmx.svg)](https://www.npmjs.com/package/iobroker.node-dmx)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.node-dmx.svg)](https://www.npmjs.com/package/iobroker.node-dmx)
-![Number of Installations (latest)](http://iobroker.live/badges/node-dmx-installed.svg)
-![Number of Installations (stable)](http://iobroker.live/badges/node-dmx-stable.svg)
-[![Dependency Status](https://img.shields.io/david/Boardman-ger/iobroker.node-dmx.svg)](https://david-dm.org/Boardman-ger/iobroker.node-dmx)
-[![Known Vulnerabilities](https://snyk.io/test/github/Boardman-ger/ioBroker.node-dmx/badge.svg)](https://snyk.io/test/github/Boardman-ger/ioBroker.node-dmx)
+[![NPM version](http://img.shields.io/npm/v/iobroker.nodedmx.svg)](https://www.npmjs.com/package/iobroker.nodedmx)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.nodedmx.svg)](https://www.npmjs.com/package/iobroker.nodedmx)
+![Number of Installations (latest)](http://iobroker.live/badges/nodedmx-installed.svg)
+![Number of Installations (stable)](http://iobroker.live/badges/nodedmx-stable.svg)
+[![Dependency Status](https://img.shields.io/david/Boardman-ger/iobroker.nodedmx.svg)](https://david-dm.org/Boardman-ger/iobroker.nodedmx)
+[![Known Vulnerabilities](https://snyk.io/test/github/Boardman-ger/ioBroker.nodedmx/badge.svg)](https://snyk.io/test/github/Boardman-ger/ioBroker.nodedmx)
 
-[![NPM](https://nodei.co/npm/iobroker.node-dmx.png?downloads=true)](https://nodei.co/npm/iobroker.node-dmx/)
+[![NPM](https://nodei.co/npm/iobroker.nodedmx.png?downloads=true)](https://nodei.co/npm/iobroker.nodedmx/)
 
-**Tests:** ![Test and Release](https://github.com/Boardman-ger/ioBroker.node-dmx/workflows/Test%20and%20Release/badge.svg)
+**Tests:** ![Test and Release](https://github.com/Boardman-ger/ioBroker.nodedmx/workflows/Test%20and%20Release/badge.svg)
 
-## node-dmx adapter for ioBroker
+## nodedmx adapter for ioBroker
 
-node-dmx
+nodedmx
 
-## Developer manual
-This section is intended for the developer. It can be deleted later
 
-### Getting started
-
-You are almost done, only a few steps left:
-1. Create a new repository on GitHub with the name `ioBroker.node-dmx`
-1. Initialize the current folder as a new git repository:  
-	```bash
-	git init
-	git add .
-	git commit -m "Initial commit"
-	```
-1. Link your local repository with the one on GitHub:  
-	```bash
-	git remote add origin https://github.com/Boardman-ger/ioBroker.node-dmx
-	```
-
-1. Push all files to the GitHub repo:  
-	```bash
-	git push origin master
-	```
-
-1. Head over to [src/main.ts](src/main.ts) and start programming!
-
-### Best Practices
-We've collected some [best practices](https://github.com/ioBroker/ioBroker.repositories#development-and-coding-best-practices) regarding ioBroker development and coding in general. If you're new to ioBroker or Node.js, you should
-check them out. If you're already experienced, you should also take a look at them - you might learn something new :)
 
 ### Scripts in `package.json`
 Several npm scripts are predefined for your convenience. You can run them using `npm run <scriptname>`
@@ -91,8 +64,8 @@ In order to install the adapter locally without publishing, the following steps 
 	```
 
 For later updates, the above procedure is not necessary. Just do the following:
-1. Overwrite the changed files in the adapter directory (`/opt/iobroker/node_modules/iobroker.node-dmx`)
-1. Execute `iobroker upload node-dmx` on the ioBroker host
+1. Overwrite the changed files in the adapter directory (`/opt/iobroker/node_modules/iobroker.nodedmx`)
+1. Execute `iobroker upload nodedmx` on the ioBroker host
 
 ## Changelog
 
