@@ -16,7 +16,7 @@
 				"zh-cn": "首次出版"
 			}
 		},
-		"title": "NodeDMX",
+		"title": "nodeDMX",
 		"titleLang": {
 			"en": "nodeDMX",
 			"de": "nodeDMX",
@@ -41,7 +41,7 @@
 			"pl": "nodedmx",
 			"zh-cn": "纳米DMX"
 		},
-		"authors": [
+		"author": [
 			"Boardman-ger <Boardman-ger@selzer-schoeneck.de>"
 		],
 		"keywords": [
@@ -71,8 +71,8 @@
 		]
 	},
 	"native": {
-		"Device": "/dev/ttyACM0", 
-		"Test": "4210"
+		"Device": "/dev/ttyACM0",
+		"Driver": "dmx4all"
 	},
 	"objects": [],
 	"instanceObjects": []
