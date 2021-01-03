@@ -37,6 +37,7 @@ Driver = driver name as mentioned above,    dmx4all    in my case
 Last DMX chanel used = range of chanels to be created as objects under IO Broker
 F.e. 20 will create the objects nodedmx.0.DMX000 to nodedmx.0.DMX020 these objects can be accessed by IOBroler or Node Red etc...
 
+The adapter is only supporting direct access to channels - no other features of class DMX-Animation of node-dmx are supportet!
 
 ## Changelog
 
