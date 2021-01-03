@@ -83,7 +83,7 @@ class nodedmx extends utils.Adapter {
 		this.mydmx.universe = this.mydmx.addUniverse("myusb", this.config.driver, this.config.device, "null");
 		this.log.info(`Universe erzeugt`);
 		this.mydmx.universe.updateAll(0);
-
+		/** only for testing of channel assignments
 		// Keller 2-5
 		this.mydmx.universe.update({2: 90, 3: 15, 4: 255, 5 : 25});
 		// OG 6-9
@@ -91,8 +91,8 @@ class nodedmx extends utils.Adapter {
 		// Küche 10-13
 		this.mydmx.universe.update({10: 90, 11: 15, 12: 255, 13 : 25});
 		// Party 16-18, Terasse 19-21
-
 		this.log.info("on");
+		*/
 
 
 
@@ -102,9 +102,9 @@ class nodedmx extends utils.Adapter {
 		if (this.config.channels_used >224) {this.config.channels_used = 224}
 		if (this.config.channels_used <0) {this.config.channels_used = 1}
 
-		this.log.info("config option1: " + this.config.device);
-		this.log.info("config option3: " + this.config.driver);
-		this.log.info("config option4: " + this.config.channels_used);
+		this.log.debug("config option1: " + this.config.device);
+		this.log.debug("config option3: " + this.config.driver);
+		this.log.debug("config option4: " + this.config.channels_used);
 
 	    // we are ready, let's set the connection indicator
 		this.setState("info.connection", true, true);
@@ -181,22 +181,22 @@ class nodedmx extends utils.Adapter {
 	private onStateChange(id: string, state: ioBroker.State | null | undefined): void {
 		if (state) {
 			// var adaptername = this.name;
-			this.log.info(this.name);
+			//this.log.info(this.name);
 			// The state was changed: state nodedmx.0.DMX010 changed: 100 (ack = false)
-			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
+			this.log.debug(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			const portstring:string = id.substring(this.name.length+3);
 			const portnumber:number = parseInt(portstring.substring(3));
 
-			this.log.info(`number ${portnumber}`);
-			this.log.info(`value ${state.val}`);
+			this.log.debug(`number ${portnumber}`);
+			this.log.debug(`value ${state.val}`);
 
 			// this.mydmx.universe.update({11: state.val });
 			this.mydmx.universe.update({[portnumber]: state.val });
 
-			this.log.info("updated");
+			//this.log.info("updated");
 		} else {
 			// The state was deleted
-			this.log.info(`state ${id} deleted`);
+			this.log.debug(`state ${id} deleted`);
 		}
 	}
 
