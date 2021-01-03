@@ -185,7 +185,7 @@ class nodedmx extends utils.Adapter {
 			// The state was changed: state nodedmx.0.DMX010 changed: 100 (ack = false)
 			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 			const portstring:string = id.substring(this.name.length+3);
-			let portnumber:number = parseInt(portstring.substring(3));
+			const portnumber:number = parseInt(portstring.substring(3));
 
 			this.log.info(`number ${portnumber}`);
 			this.log.info(`value ${state.val}`);
@@ -199,18 +199,18 @@ class nodedmx extends utils.Adapter {
 			this.log.info(`state ${id} deleted`);
 		}
 	}
-	
-	private GetDMX (number:number){
-		if (number <10) {return 'DMX00'+number;}
-		if (number <100) {return 'DMX0'+number;}
-		return 'DMX'+number;
+
+	private GetDMX (number:number):string {
+		if (number <10) {return "DMX00"+number;}
+		if (number <100) {return "DMX0"+number;}
+		return "DMX"+number;
 	}
 
 }
 
 if (module.parent) {
-    // Export the constructor in compact mode
-    module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new nodedmx(options);
+	// Export the constructor in compact mode
+	module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new nodedmx(options);
 } else {
 	// otherwise start the instance directly
 	(() => new nodedmx())();

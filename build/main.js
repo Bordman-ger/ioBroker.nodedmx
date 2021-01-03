@@ -167,7 +167,7 @@ class nodedmx extends utils.Adapter {
             // The state was changed: state nodedmx.0.DMX010 changed: 100 (ack = false)
             this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
             const portstring = id.substring(this.name.length + 3);
-            let portnumber = parseInt(portstring.substring(3));
+            const portnumber = parseInt(portstring.substring(3));
             this.log.info(`number ${portnumber}`);
             this.log.info(`value ${state.val}`);
             // this.mydmx.universe.update({11: state.val });
@@ -181,12 +181,12 @@ class nodedmx extends utils.Adapter {
     }
     GetDMX(number) {
         if (number < 10) {
-            return 'DMX00' + number;
+            return "DMX00" + number;
         }
         if (number < 100) {
-            return 'DMX0' + number;
+            return "DMX0" + number;
         }
-        return 'DMX' + number;
+        return "DMX" + number;
     }
 }
 if (module.parent) {
