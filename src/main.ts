@@ -83,16 +83,16 @@ class nodedmx extends utils.Adapter {
 		this.mydmx.universe = this.mydmx.addUniverse("myusb", this.config.driver, this.config.device, "null");
 		this.log.info(`Universe erzeugt`);
 		this.mydmx.universe.updateAll(0);
-		
+
 		// Keller 2-5
 		this.mydmx.universe.update({2: 90, 3: 15, 4: 255, 5 : 25});
 		// OG 6-9
 		this.mydmx.universe.update({6: 90, 7: 15, 8: 255, 9 : 25});
-		// Küche 10-13 
+		// Küche 10-13
 		this.mydmx.universe.update({10: 90, 11: 15, 12: 255, 13 : 25});
 		// Party 16-18, Terasse 19-21
 
-		this.log.info('on');
+		this.log.info("on");
 
 
 
@@ -108,7 +108,7 @@ class nodedmx extends utils.Adapter {
 
 	    // we are ready, let's set the connection indicator
 		this.setState("info.connection", true, true);
-//UWE offen Check driver/Device
+		//offen Check driver/Device
 
 		//Initialize ioBrokers state objects if they dont exist
 		//DMX CHANNELS contain and send DMX value 0-255 to a DMX channel
@@ -116,13 +116,13 @@ class nodedmx extends utils.Adapter {
 		for (let i = 0; i <= this.config.channels_used ; i++) {
 		// for (i:Number =1;i<=21;i++){
 			this.setObjectNotExists (this.GetDMX (i),{
-				type:'state',
-				common:{name:"DMX channel"+i ,type:'number',role:'value',read:true,write:true},
+				type:"state",
+				common:{name:"DMX channel"+i ,type:"number",role:"value",read:true,write:true},
 				native:{}
 			});
 		}
-			
-		
+
+
 		// await this.setObjectNotExistsAsync("testVariable", {
 		// 	type: "state",
 		// 	common: {
@@ -166,7 +166,7 @@ class nodedmx extends utils.Adapter {
 			// clearInterval(interval1);
 			this.mydmx?.universe?.close();
 			this.mydmx?.close();
-			
+
 			callback();
 		} catch (e) {
 			callback();
@@ -184,19 +184,16 @@ class nodedmx extends utils.Adapter {
 			this.log.info(this.name);
 			// The state was changed: state nodedmx.0.DMX010 changed: 100 (ack = false)
 			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
-			let portstring:string = id.substring(this.name.length+3);  				//remove Instance name
+			const portstring:string = id.substring(this.name.length+3);
 			let portnumber:number = parseInt(portstring.substring(3));
 
 			this.log.info(`number ${portnumber}`);
 			this.log.info(`value ${state.val}`);
 
-			// this.mydmx.universe.update({11: state.val });  
-			this.mydmx.universe.update({[portnumber]: state.val });   
-		
-			this.log.info('updated');
-			
-		
-		// Küche 10-13 
+			// this.mydmx.universe.update({11: state.val });
+			this.mydmx.universe.update({[portnumber]: state.val });
+
+			this.log.info("updated");
 		} else {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
