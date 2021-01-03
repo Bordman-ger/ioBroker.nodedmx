@@ -87,11 +87,9 @@ class nodedmx extends utils.Adapter {
             if (this.config.channels_used > 224) {
                 this.config.channels_used = 224;
             }
-            ;
             if (this.config.channels_used < 0) {
                 this.config.channels_used = 1;
             }
-            ;
             this.log.info("config option1: " + this.config.device);
             this.log.info("config option3: " + this.config.driver);
             this.log.info("config option4: " + this.config.channels_used);
@@ -105,7 +103,7 @@ class nodedmx extends utils.Adapter {
                 // for (i:Number =1;i<=21;i++){
                 this.setObjectNotExists(this.GetDMX(i), {
                     type: 'state',
-                    common: { name: 'DMX channel' + i, type: 'number', role: 'value', read: true, write: true },
+                    common: { name: "DMX channel" + i, type: 'number', role: 'value', read: true, write: true },
                     native: {}
                 });
             }
