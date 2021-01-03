@@ -99,8 +99,8 @@ class nodedmx extends utils.Adapter {
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
 		//LIMIT the number of DMX channels max. 224 usable with ioBroker
-		if (this.config.channels_used >224) {this.config.channels_used = 224};
-		if (this.config.channels_used <0) {this.config.channels_used = 1};
+		if (this.config.channels_used >224) {this.config.channels_used = 224}
+		if (this.config.channels_used <0) {this.config.channels_used = 1}
 
 		this.log.info("config option1: " + this.config.device);
 		this.log.info("config option3: " + this.config.driver);
@@ -117,7 +117,7 @@ class nodedmx extends utils.Adapter {
 		// for (i:Number =1;i<=21;i++){
 			this.setObjectNotExists (this.GetDMX (i),{
 				type:'state',
-				common:{name:'DMX channel'+i ,type:'number',role:'value',read:true,write:true},
+				common:{name:"DMX channel"+i ,type:'number',role:'value',read:true,write:true},
 				native:{}
 			});
 		}
