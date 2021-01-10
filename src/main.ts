@@ -201,9 +201,9 @@ class nodedmx extends utils.Adapter {
 	}
 
 	private GetDMX (number:number):string {
-		if (number <10) {return "DMX00"+number;}
-		if (number <100) {return "DMX0"+number;}
-		return "DMX"+number;
+		if (number <10) {return "00"+number;}
+		if (number <100) {return "0"+number;}
+		return ""+number;
 	}
 
 }

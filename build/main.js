@@ -183,12 +183,12 @@ class nodedmx extends utils.Adapter {
     }
     GetDMX(number) {
         if (number < 10) {
-            return "DMX00" + number;
+            return "00" + number;
         }
         if (number < 100) {
-            return "DMX0" + number;
+            return "0" + number;
         }
-        return "DMX" + number;
+        return "" + number;
     }
 }
 if (module.parent) {
