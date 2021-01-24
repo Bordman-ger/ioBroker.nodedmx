@@ -117,7 +117,7 @@ class nodedmx extends utils.Adapter {
 		// for (i:Number =1;i<=21;i++){
 			this.setObjectNotExists (this.GetDMX (i),{
 				type:"state",
-				common:{name:"DMX channel"+i ,type:"number",role:"value",read:true,write:true},
+				common:{name:"DMX channel "+i ,type:"number",role:"value",read:true,write:true},
 				native:{}
 			});
 		}
@@ -139,7 +139,7 @@ class nodedmx extends utils.Adapter {
 		// You can also add a subscription for multiple states. The following line watches all states starting with "lights."
 		// this.subscribeStates("lights.*");
 		// Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
-		this.subscribeStates("DMX*");
+		this.subscribeStates("*");
 		// the variable testVariable is set to true as command (ack=false)
 		// await this.setStateAsync("testVariable", true);
 		// same thing, but the value is flagged "ack"
