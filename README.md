@@ -41,6 +41,9 @@ The adapter is only supporting direct access to channels - no other features of 
 
 ## Changelog
 
+### 0.1.1
+* (Boardman-ger) Variable name changed
+
 ### 0.1.0
 * (Boardman-ger) initial release
 
