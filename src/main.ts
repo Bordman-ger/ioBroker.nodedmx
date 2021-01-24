@@ -187,7 +187,9 @@ class nodedmx extends utils.Adapter {
 			//const portstring:string = id.substring(this.name.length+3);
 			//const portnumber:number = parseInt(portstring.substring(3));
 			const portstring:string = id.substring(this.name.length);
-			const portnumber:number = parseInt(portstring.substring(0));
+			this.log.debug(`portstring ${portstring}`);
+			this.log.debug(`zwei ${portstring.substring(3)}`);
+			const portnumber:number = parseInt(portstring.substring(3));
 
 			this.log.debug(`number ${portnumber}`);
 			this.log.debug(`value ${state.val}`);
