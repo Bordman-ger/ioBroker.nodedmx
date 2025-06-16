@@ -36,7 +36,7 @@
 
         "sourceMap": true,
         "inlineSourceMap": false,
-        "watch": false
+        //"watch": false
     },
     
     "include": [

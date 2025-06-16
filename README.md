@@ -41,6 +41,9 @@ The adapter is only supporting direct access to channels - no other features of 
 
 ## Changelog
 
+### 1.0.0
+* (Boardman-ger) adaption for node.js
+
 ### 0.1.1
 * (Boardman-ger) Variable name changed
 
