@@ -14,7 +14,7 @@
 
 ## nodedmx adapter for ioBroker
 
-nodedmx adpter is used to have acces to node-dmx/dmx modules for accessing varios DMX devices as explained here: 
+nodedmx adapter is used to have access to node-dmx/dmx modules for accessing various DMX devices as explained here: 
 
 https://github.com/node-dmx/dmx
 
@@ -34,14 +34,14 @@ I have only tested the dmx4all device together with a nanoDMX Controler.
 Parameters: 
 Device = hardware device e.g.    /dev/ttyACM0     for nanoDMX
 Driver = driver name as mentioned above,    dmx4all    in my case
-Last DMX chanel used = range of chanels to be created as objects under IO Broker
+Last DMX channel used = range of channels to be created as objects under IO Broker
 F.e. 20 will create the objects nodedmx.0.DMX000 to nodedmx.0.DMX020 these objects can be accessed by IOBroler or Node Red etc...
 
-The adapter is only supporting direct access to channels - no other features of class DMX-Animation of node-dmx are supportet!
+The adapter is only supporting direct access to channels - no other features of class DMX-Animation of node-dmx are supported!
 
 ## Changelog
 
-### 1.0.0
+### 1.0.1
 * (Boardman-ger) adaption for node.js
 
 ### 0.1.1
