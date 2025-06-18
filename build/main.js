@@ -169,10 +169,7 @@ class nodedmx extends utils.Adapter {
             // The state was changed: state nodedmx.0.DMX010 changed: 100 (ack = false)
             this.log.debug(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
             //const portstring:string = id.substring(this.name.length+3);
-            //const portnumber:number = parseInt(portstring.substring(3));
             const portstring = id.substring(this.name.length);
-            this.log.debug(`portstring ${portstring}`);
-            this.log.debug(`zwei ${portstring.substring(3)}`);
             const portnumber = parseInt(portstring.substring(3));
             this.log.debug(`number ${portnumber}`);
             this.log.debug(`value ${state.val}`);
