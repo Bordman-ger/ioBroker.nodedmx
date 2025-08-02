@@ -40,9 +40,9 @@ export type NamedStateEventHandler = (id: string, value: any) => void;
 class nodedmx extends utils.Adapter {
 	private mydmx?: any;
 	//private existingObjects: Record<string, ioBroker.Object> = {};
+	// Stores the current values of states; reserved for future use or state tracking
 	private currentStateValues: Record<string, CurrentStateValue> = {};
 	// private operatingModes: OperatingModes = {};
-	private stateChangeListeners: Record<string, StateChangeListener> = {};
 	private stateEventHandlers: Record<string, StateEventRegistration[]> = {};
 
 	private cacheEvents = false;

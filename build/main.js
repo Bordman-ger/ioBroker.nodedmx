@@ -27,16 +27,13 @@ module.exports = __toCommonJS(main_exports);
 var utils = __toESM(require("@iobroker/adapter-core"));
 var import_dmx = __toESM(require("dmx"));
 const dmx = new import_dmx.default();
-<<<<<<< HEAD
-=======
 adaptername = "nodedmx";
->>>>>>> c9a0ee44b200140f839ad61c305ca43849971076
 class nodedmx extends utils.Adapter {
   mydmx;
   //private existingObjects: Record<string, ioBroker.Object> = {};
+  // Stores the current values of states; reserved for future use or state tracking
   currentStateValues = {};
   // private operatingModes: OperatingModes = {};
-  stateChangeListeners = {};
   stateEventHandlers = {};
   cacheEvents = false;
   eventsCache = {};
