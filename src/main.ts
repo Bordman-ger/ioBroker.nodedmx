@@ -8,8 +8,13 @@ import * as utils from "@iobroker/adapter-core";
 //import type { State } from "@iobroker/adapter-core";
 import DMX from "dmx";
 const dmx = new DMX();
+<<<<<<< HEAD
 //declare var adaptername: string;
 //adaptername   = "nodedmx";
+=======
+declare var adaptername: string;
+adaptername   = "nodedmx";
+>>>>>>> c9a0ee44b200140f839ad61c305ca43849971076
 
 // Augment the adapter.config object with the actual types
 declare global {
