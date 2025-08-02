@@ -5,10 +5,11 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 import * as utils from "@iobroker/adapter-core";
+//import type { State } from "@iobroker/adapter-core";
 import DMX from "dmx";
-// const dmx = new DMX();
-// declare var adaptername: string;
-// adaptername   = "nodedmx";
+const dmx = new DMX();
+declare var adaptername: string;
+adaptername   = "nodedmx";
 
 // Augment the adapter.config object with the actual types
 declare global {
@@ -38,7 +39,7 @@ export type NamedStateEventHandler = (id: string, value: any) => void;
 
 class nodedmx extends utils.Adapter {
 	private mydmx?: any;
-	private existingObjects: Record<string, ioBroker.Object> = {};
+	//private existingObjects: Record<string, ioBroker.Object> = {};
 	private currentStateValues: Record<string, CurrentStateValue> = {};
 	// private operatingModes: OperatingModes = {};
 	private stateChangeListeners: Record<string, StateChangeListener> = {};
@@ -54,9 +55,10 @@ class nodedmx extends utils.Adapter {
 			...options,
 			name: "nodedmx",
 		});
+		// Register event handlers after calling super()
 		this.on("ready", this.onReady.bind(this));
 		this.on("stateChange", this.onStateChange.bind(this));
-		// this.on("objectChange", this.onObjectChange.bind(this));
+		//this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
 	}
@@ -176,8 +178,8 @@ class nodedmx extends utils.Adapter {
 
 
 	/**
-	 * Is called if a subscribed state changes
-	 */
+	 * Is called if a subscribed state changes*/
+	/*private onStateChange(id: string, state: State | null | undefined): void {*/
 	private onStateChange(id: string, state: ioBroker.State | null | undefined): void {
 		if (state) {
 			// var adaptername = this.name;
