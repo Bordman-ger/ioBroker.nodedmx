@@ -1,9 +1,10 @@
 {
     "compileOnSave": true,
+    "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
         // do not compile anything, this file is just to configure type checking
         // the compilation is configured in tsconfig.build.json
-        "noEmit": false,
+        "noEmit": true,
 
         // check JS files, but do not compile them => tsconfig.build.json
         "allowJs": true,
@@ -12,14 +13,14 @@
         "noEmitOnError": true,
         "outDir": "./build/",
         "removeComments": false,
-        "module": "commonjs",
-        "moduleResolution": "node",
+        //us "module": "commonjs",
+        //us "moduleResolution": "node",
         // this is necessary for the automatic typing of the adapter config
         "resolveJsonModule": true,
 		// Support React
 		"jsx": "react",
         // Set this to false if you want to disable the very strict rules (not recommended)
-        "strict": true,
+        // "strict": false,
         // Or enable some of those features for more fine-grained control
         // "strictNullChecks": true,
         // "strictPropertyInitialization": true,
@@ -27,12 +28,12 @@
         // "noImplicitAny": true,
         // "noUnusedLocals": true,
         // "noUnusedParameters": true,
-		"noUnusedLocals": false,
-		"noUnusedParameters": true,
+		//"noUnusedLocals": false,
+		//"noUnusedParameters": true,
 		"types": ["node"],
 		"esModuleInterop": true,
         // Consider targetting es2017 or higher if you require the new NodeJS 8+ features
-        "target": "ES2015",
+        //us "target": "ES2020",
 
         "sourceMap": true,
         "inlineSourceMap": false,

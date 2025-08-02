@@ -4,10 +4,10 @@
  * It's automatically excluded from npm and its build output is excluded from both git and npm.
  * It is advised to test all your modules with accompanying *.test.ts-files
  */
-/*
+
 import { expect } from "chai";
 // import { functionToTest } from "./moduleToTest";
-
+/*
 describe("module to test => function to test", () => {
 	// initializing logic
 	const expected = 5;
@@ -22,6 +22,5 @@ describe("module to test => function to test", () => {
 	// ... more tests => it
 
 });
-
-// ... more test suites => describe
 */
+// ... more test suites => describe
